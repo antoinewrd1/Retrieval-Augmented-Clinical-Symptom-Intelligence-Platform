@@ -20,6 +20,7 @@ Dockerized deployment
 ⚡ Real-Time Interaction
 Instant analysis via API + UI integration
 🏗️ Architecture
+
 User (Streamlit UI)
         ↓
 FastAPI Backend (/analyze)
@@ -31,6 +32,7 @@ OpenAI LLM (augmented prompt)
 FHIR Formatter + Database Logging
         ↓
 Response → UI
+
 📁 Project Structure
 medassist-ai/
 │
@@ -57,6 +59,7 @@ medassist-ai/
 ├── docker-compose.yml
 ├── requirements.txt
 └── .env
+
 ⚙️ Tech Stack
 Backend: FastAPI, Uvicorn
 Frontend: Streamlit
@@ -65,17 +68,23 @@ Vector DB: FAISS (via LangChain)
 Database: PostgreSQL + SQLAlchemy
 Healthcare Standard: FHIR (fhir.resources)
 Containerization: Docker
+
 🔐 Environment Variables
 
 Create a .env file:
 
 OPENAI_API_KEY=your_api_key_here
 DATABASE_URL=postgresql://postgres:password@db:5432/medassist
+
+
+
 🧠 How RAG Works
 Clinical documents are embedded and stored in FAISS
 User symptom input is used to retrieve relevant context
 Context is injected into the LLM prompt
 The model generates a more accurate, grounded response
+
+
 ▶️ Running the Application
 1. Start Backend (Docker)
 docker-compose up --build
@@ -101,6 +110,8 @@ Response:
   "response": "...clinical analysis...",
   "fhir": "{FHIR JSON}"
 }
+
+
 🧪 Test Workflow
 Open Streamlit UI
 Enter symptoms
@@ -110,6 +121,7 @@ Clinical output
 Risk interpretation
 Suggested codes
 FHIR JSON
+
 📦 Docker Notes
 
 Make sure your Dockerfile CMD is corrected:
