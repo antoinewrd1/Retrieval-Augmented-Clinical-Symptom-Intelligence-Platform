@@ -4,7 +4,7 @@ MedAssist AI is an end-to-end clinical decision-support prototype that leverages
 
 It integrates FastAPI, Streamlit, OpenAI, and FAISS to simulate a modern AI-powered healthcare analytics system with FHIR-compatible outputs.
 
-🚀 Key Features
+🚀 **Key Features**
 🔍 Symptom Analysis with LLMs
 Uses OpenAI models to generate clinical insights from user input
 🧠 Retrieval-Augmented Generation (RAG)
@@ -21,7 +21,7 @@ Dockerized deployment
 Instant analysis via API + UI integration
 
 
-🏗️ Architecture
+🏗️ **Architecture**
 
 User (Streamlit UI)
         ↓
@@ -36,7 +36,7 @@ FHIR Formatter + Database Logging
 Response → UI
 
 
-📁 Project Structure
+📁 **Project Structure**
 medassist-ai/
 │
 ├── backend/
@@ -64,7 +64,7 @@ medassist-ai/
 └── .env
 
 
-⚙️ Tech Stack
+⚙️ **Tech Stack**
 Backend: FastAPI, Uvicorn
 Frontend: Streamlit
 LLM: OpenAI API
@@ -74,13 +74,13 @@ Healthcare Standard: FHIR (fhir.resources)
 Containerization: Docker
 
 
-🔐 Environment Variables
+🔐 **Environment Variables**
 Create a .env file:
 OPENAI_API_KEY=your_api_key_here
 DATABASE_URL=postgresql://postgres:password@db:5432/medassist
 
 
-🧠 How RAG Works
+🧠 **How RAG Works**
 Clinical documents are embedded and stored in FAISS
 User symptom input is used to retrieve relevant context
 Context is injected into the LLM prompt
@@ -88,7 +88,7 @@ The model generates a more accurate, grounded response
 
 
 
-▶️ Running the Application
+▶️ **Running the Application**
 1. Start Backend (Docker)
 docker-compose up --build
 Backend runs at:
@@ -102,7 +102,7 @@ Frontend runs at:
 http://localhost:8501
 
 
-🔄 API Endpoint
+🔄 **API Endpoint**
 POST /analyze
 Request:
 {
@@ -115,7 +115,7 @@ Response:
 }
 
 
-🧪 Test Workflow
+🧪 **Test Workflow**
 Open Streamlit UI
 
 Enter symptoms
@@ -132,18 +132,18 @@ Suggested codes
 FHIR JSON
 
 
-📦 Docker Notes
+📦 **Docker Notes**
 Make sure your Dockerfile CMD is corrected:
 CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 
-⚠️ Disclaimer
+⚠️ **Disclaimer**
 
 This project is for educational and demonstration purposes only.
 It is not a medical device and should not be used for diagnosis or treatment decisions.
 
 
-📈 Future Improvements
+📈 **Future Improvements**
 
 🔬 Fine-tuned medical LLM integration
 
@@ -157,12 +157,9 @@ It is not a medical device and should not be used for diagnosis or treatment dec
 
 📊 Dashboard analytics (Power BI / Tableau integration)
 
-👨‍💻 Author
 
-
+👨‍💻 **Author**
 Antoine Ward
 Healthcare Data Engineer | Data Scientist
-
-
 LinkedIn: https://linkedin.com/in/antoine-ward-mph-2401581a1
 GitHub: https://github.com/antoinewrd1
