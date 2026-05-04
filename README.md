@@ -70,11 +70,11 @@ Healthcare Standard: FHIR (fhir.resources)
 Containerization: Docker
 
 🔐 Environment Variables
-
 Create a .env file:
 
 OPENAI_API_KEY=your_api_key_here
 DATABASE_URL=postgresql://postgres:password@db:5432/medassist
+
 
 
 
@@ -85,6 +85,7 @@ Context is injected into the LLM prompt
 The model generates a more accurate, grounded response
 
 
+
 ▶️ Running the Application
 1. Start Backend (Docker)
 docker-compose up --build
@@ -92,6 +93,7 @@ docker-compose up --build
 Backend runs at:
 
 http://localhost:8000
+
 2. Start Frontend (Streamlit)
 cd frontend
 streamlit run app.py
@@ -122,15 +124,19 @@ Risk interpretation
 Suggested codes
 FHIR JSON
 
+
 📦 Docker Notes
 
 Make sure your Dockerfile CMD is corrected:
 
 CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+
 ⚠️ Disclaimer
 
 This project is for educational and demonstration purposes only.
 It is not a medical device and should not be used for diagnosis or treatment decisions.
+
 
 📈 Future Improvements
 🔬 Fine-tuned medical LLM integration
@@ -141,8 +147,10 @@ It is not a medical device and should not be used for diagnosis or treatment dec
 📊 Dashboard analytics (Power BI / Tableau integration)
 👨‍💻 Author
 
+
 Antoine Ward
 Healthcare Data Engineer | Data Scientist
+
 
 LinkedIn: https://linkedin.com/in/antoine-ward-mph-2401581a1
 GitHub: https://github.com/antoinewrd1
