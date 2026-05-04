@@ -19,6 +19,8 @@ Streamlit frontend
 Dockerized deployment
 ⚡ Real-Time Interaction
 Instant analysis via API + UI integration
+
+
 🏗️ Architecture
 
 User (Streamlit UI)
@@ -32,6 +34,7 @@ OpenAI LLM (augmented prompt)
 FHIR Formatter + Database Logging
         ↓
 Response → UI
+
 
 📁 Project Structure
 medassist-ai/
@@ -60,6 +63,7 @@ medassist-ai/
 ├── requirements.txt
 └── .env
 
+
 ⚙️ Tech Stack
 Backend: FastAPI, Uvicorn
 Frontend: Streamlit
@@ -69,13 +73,11 @@ Database: PostgreSQL + SQLAlchemy
 Healthcare Standard: FHIR (fhir.resources)
 Containerization: Docker
 
+
 🔐 Environment Variables
 Create a .env file:
-
 OPENAI_API_KEY=your_api_key_here
 DATABASE_URL=postgresql://postgres:password@db:5432/medassist
-
-
 
 
 🧠 How RAG Works
@@ -89,18 +91,17 @@ The model generates a more accurate, grounded response
 ▶️ Running the Application
 1. Start Backend (Docker)
 docker-compose up --build
-
 Backend runs at:
-
 http://localhost:8000
+
 
 2. Start Frontend (Streamlit)
 cd frontend
 streamlit run app.py
-
 Frontend runs at:
-
 http://localhost:8501
+
+
 🔄 API Endpoint
 POST /analyze
 Request:
@@ -116,19 +117,23 @@ Response:
 
 🧪 Test Workflow
 Open Streamlit UI
+
 Enter symptoms
+
 Click Analyze
+
 View:
 Clinical output
+
 Risk interpretation
+
 Suggested codes
+
 FHIR JSON
 
 
 📦 Docker Notes
-
 Make sure your Dockerfile CMD is corrected:
-
 CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 
@@ -139,12 +144,19 @@ It is not a medical device and should not be used for diagnosis or treatment dec
 
 
 📈 Future Improvements
+
 🔬 Fine-tuned medical LLM integration
+
 📚 Expanded clinical knowledge base
+
 🧾 ICD-10 / SNOMED code mapping
+
 🔐 Authentication & HIPAA-compliant logging
+
 ☁️ Cloud deployment (AWS/GCP/Azure)
+
 📊 Dashboard analytics (Power BI / Tableau integration)
+
 👨‍💻 Author
 
 
