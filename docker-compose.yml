@@ -1,0 +1,13 @@
+services:
+  notebook:
+    build:
+      context: .
+    container_name: medassist-notebook
+    ports:
+      - "8888:8888"
+    env_file:
+      - .env
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=''
